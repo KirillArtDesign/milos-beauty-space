@@ -1,29 +1,137 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#77746b">
-<title>Пространство красоты</title>
-<link rel="stylesheet" href="beauty-space-hero.css">
-</head>
-<body>
-<main class="hero" id="top">
- <header class="header">
-  <div class="location">Санкт-Петербург<br>Каменноостровский проспект, 10 лит Б, 2 этаж</div>
-  <a class="brand" href="#top" aria-label="Пространство красоты"><div class="brand-main">ПРОСТРАНСТВО КРАСОТЫ</div></a>
-  <nav class="nav" aria-label="Навигация"><a href="#" >Услуги</a><a href="#" >Отзывы</a><a href="#" >Контакты</a></nav>
- </header>
- <section class="content" aria-labelledby="hero-title">
-  <p class="offer">Запишитесь на первую процедуру и почувствуйте,<br>как кожа обретает сияние и комфорт.<br><strong>Скидка 10% на первое посещение.</strong></p>
-  <h1 id="hero-title">Пространство красоты,<br>где деликатный уход<br>подчёркивает<span class="mobile-break"><br></span> естественную красоту</h1>
-  <button type="button" class="cta" data-modal="Записаться">Записаться</button>
- </section>
- <aside class="author">
-  <img alt="Яна Милос — косметолог-эстетист" src="assets/yana-milos.png">
-  <div class="author-copy"><p>Здесь вы попадаете в атмосферу спокойствия и доверия. Внутреннее напряжение постепенно уходит, и кожа с благодарностью откликается на косметологический уход.</p><p><b>Яна Милос,</b><br>косметолог-эстетист</p></div>
- </aside>
-</main>
-<div class="dialog" id="dialog" role="dialog" aria-modal="true" aria-labelledby="modal-title" aria-hidden="true"><div class="modal"><button class="close" aria-label="Закрыть">×</button><h2 id="modal-title">Записаться</h2><p id="modal-description">Чтобы записаться на массаж, свяжитесь со студией. Здесь можно подключить форму записи или вашу CRM.</p><a target="_blank" rel="noopener" href="https://yandex.ru/maps/?text=%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0%2C%20%D0%90%D1%80%D1%85%D0%B8%D1%82%D0%B5%D0%BA%D1%82%D0%BE%D1%80%D0%B0%20%D0%92%D0%BB%D0%B0%D1%81%D0%BE%D0%B2%D0%B0%2071">Посмотреть адрес на карте</a></div></div>
-<script src="beauty-space-hero.js" defer></script>
-</body></html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#e8e2d8" />
+    <meta name="description" content="Яна Милос — врач-косметолог. Эстетическая косметология, индивидуальный уход и приём в Москве и Санкт-Петербурге." />
+    <title>Яна Милос — врач-косметолог</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="yana-milos.css" />
+    <script src="yana-milos.js" defer></script>
+  </head>
+  <body>
+    <main class="page-shell">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="topline" data-reveal>
+          <span class="eyebrow">Врач-косметолог</span>
+          <span class="topline__rule" aria-hidden="true"></span>
+        </div>
+
+        <div class="hero__copy">
+          <h1 class="display hero__title reveal-words" id="hero-title">Яна<br />Милос</h1>
+          <span class="short-rule" aria-hidden="true"></span>
+          <p class="hero__field reveal-words">Эстетическая косметология</p>
+        </div>
+
+        <p class="display hero__quote reveal-words">Красота<br />в гармонии<br />с вами</p>
+        <img class="hero__flower" src="assets/flower.webp" alt="" width="136" height="250" aria-hidden="true" />
+        <img class="hero__portrait" src="assets/yana-milos-portrait.png" alt="Яна Милос — врач-косметолог" width="510" height="509" fetchpriority="high" />
+
+        <div class="hero__actions" data-reveal>
+          <button class="button button--primary js-book" type="button">
+            <span>Записаться</span><span class="button__arrow" aria-hidden="true">→</span>
+          </button>
+          <button class="button button--glass js-contact" type="button" data-contact="telegram">
+            <svg class="button__icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m21.4 4-3.2 15.7c-.2 1.1-.8 1.4-1.7.9L12 17.1l-2.2 2.2c-.3.3-.5.5-1 .5l.4-4.9 8.9-8c.4-.4-.1-.6-.6-.3L6.6 13.5 2 12.1c-1-.3-1-1 .2-1.5L20 3.7c.8-.3 1.6.2 1.4.3Z" /></svg>
+            <span>Написать в Telegram</span><span class="button__arrow" aria-hidden="true">→</span>
+          </button>
+        </div>
+      </section>
+
+      <section class="cities" aria-labelledby="cities-title">
+        <header class="section-intro" data-reveal>
+          <svg class="section-intro__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z" /><circle cx="12" cy="10" r="2.5" /></svg>
+          <h2 class="eyebrow" id="cities-title">Запись в Москве<br />и Санкт-Петербурге</h2>
+        </header>
+        <div class="city-grid">
+          <a class="city-card" href="https://dikidi.net/2113008" target="_blank" rel="noopener noreferrer" data-reveal>
+            <span class="city-card__image-wrap"><img src="assets/moscow.webp" alt="Москва" width="182" height="179" loading="lazy" /><span class="city-card__arrow" aria-hidden="true">↗</span></span>
+            <strong>Москва</strong><span>Записаться на приём</span>
+          </a>
+          <a class="city-card" href="https://n1912893.yclients.com/company/935885/personal/select-master/master-info/935885/2877529?o=m2877529" target="_blank" rel="noopener noreferrer" data-reveal>
+            <span class="city-card__image-wrap"><img src="assets/petersburg.webp" alt="Санкт-Петербург" width="179" height="179" loading="lazy" /><span class="city-card__arrow" aria-hidden="true">↗</span></span>
+            <strong>Санкт-Петербург</strong><span>Записаться на приём</span>
+          </a>
+        </div>
+      </section>
+
+      <aside class="values" aria-label="Ценности Яны Милос">
+        <span data-reveal>Здоровая<br />кожа</span>
+        <span data-reveal>Естественный<br />результат</span>
+        <span data-reveal>Индивидуальный<br />подход</span>
+      </aside>
+
+      <section class="about" aria-labelledby="about-title">
+        <div class="topline" data-reveal><span class="eyebrow">Обо мне</span><span class="topline__rule" aria-hidden="true"></span></div>
+        <img class="about__flower" src="assets/flower.webp" alt="" width="136" height="250" loading="lazy" aria-hidden="true" />
+        <h2 class="display about__title reveal-words" id="about-title">Индивидуальный подход к вашей естественной красоте</h2>
+        <div class="about__copy">
+          <p class="reveal-words">Я — Яна Милос, врач-косметолог. В своей работе уделяю особое внимание естественной красоте и бережному отношению к каждому пациенту.</p>
+          <p class="reveal-words">Подбираю индивидуальный уход с учётом особенностей кожи, образа жизни и ваших пожеланий. Для меня важно сохранять гармонию и подчёркивать природные черты.</p>
+          <p class="reveal-words">Также помогаю подобрать домашний уход, чтобы поддерживать здоровье и красоту кожи каждый день.</p>
+          <p class="display about__note reveal-words">Бережный уход.<br />Внимание к деталям.</p>
+        </div>
+      </section>
+
+      <section class="contact" aria-labelledby="contact-title">
+        <header class="contact__header" data-reveal>
+          <h2 class="display contact__title" id="contact-title">Контакты</h2>
+          <p>Свяжитесь<br />удобным способом</p>
+        </header>
+        <div class="socials">
+          <button class="social social--primary js-contact" type="button" data-contact="telegram" data-reveal>
+            <span class="social__mark"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m21.4 4-3.2 15.7c-.2 1.1-.8 1.4-1.7.9L12 17.1l-2.2 2.2c-.3.3-.5.5-1 .5l.4-4.9 8.9-8c.4-.4-.1-.6-.6-.3L6.6 13.5 2 12.1c-1-.3-1-1 .2-1.5L20 3.7c.8-.3 1.6.2 1.4.3Z" /></svg></span>
+            <span>Telegram</span><span class="social__arrow" aria-hidden="true">→</span>
+          </button>
+          <button class="social js-contact" type="button" data-contact="whatsapp" data-reveal>
+            <span class="social__mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 3a9 9 0 0 0-7.7 13.6L3 21l4.6-1.2A9 9 0 1 0 12 3Z" /><path d="M8.6 8.5c-.6.5-.7 1.6.4 3.2 1.2 1.8 3 3.1 4.8 3.6 1.2.3 2.1 0 2.4-.6l.5-1-2.3-1.1-.9 1c-1.5-.6-2.2-1.4-3-2.9l.8-.9-1.2-2.2Z" /></svg></span>
+            <span>WhatsApp</span><span class="social__arrow" aria-hidden="true">→</span>
+          </button>
+          <button class="social js-contact" type="button" data-contact="instagram" data-reveal>
+            <span class="social__mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" /><circle cx="12" cy="12" r="4" /><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" /></svg></span>
+            <span>Instagram</span><span class="social__arrow" aria-hidden="true">→</span>
+          </button>
+        </div>
+
+        <div class="contact-block" data-reveal>
+          <span class="round-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M5 3h4l2 5-2.5 2.3a15 15 0 0 0 5.2 5.2L16 13l5 2v4a2 2 0 0 1-2 2C10 21 3 14 3 5a2 2 0 0 1 2-2Z" /></svg></span>
+          <span><small>Телефон для связи</small><strong class="display" id="phoneDisplay">+7 (___) ___-__-__</strong></span>
+        </div>
+        <div class="contact-block" data-reveal>
+          <span class="round-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z" /><circle cx="12" cy="10" r="2.5" /></svg></span>
+          <span><small>Адреса приёма</small><span class="contact-block__value">Москва и Санкт-Петербург</span></span>
+        </div>
+
+        <div class="address-list">
+          <article class="address" data-reveal><img src="assets/moscow.webp" alt="Москва" width="182" height="179" loading="lazy" /><div><h3>Москва</h3><p id="moscowAddress">Адрес уточняется</p></div></article>
+          <article class="address" data-reveal><img src="assets/petersburg.webp" alt="Санкт-Петербург" width="179" height="179" loading="lazy" /><div><h3>Санкт-Петербург</h3><p id="spbAddress">Адрес уточняется</p></div></article>
+        </div>
+        <button class="button button--primary contact__book js-book" type="button" data-reveal><span>Записаться на приём</span><span class="button__arrow" aria-hidden="true">→</span></button>
+        <p class="footer-credit">Яна Милос · врач-косметолог</p>
+      </section>
+    </main>
+
+    <dialog class="modal" id="bookingDialog" aria-labelledby="bookingTitle">
+      <div class="modal__body">
+        <button class="modal__close js-booking-close" type="button" aria-label="Закрыть">×</button>
+        <span class="eyebrow">Онлайн-запись</span>
+        <h2 class="display" id="bookingTitle">Выберите город</h2>
+        <p>Где вам удобнее записаться на приём? После выбора откроется сервис онлайн-записи.</p>
+        <a class="modal-city" href="https://dikidi.net/2113008" target="_blank" rel="noopener noreferrer"><img src="assets/moscow.webp" alt="" width="182" height="179" /><span>Москва</span><strong aria-hidden="true">↗</strong></a>
+        <a class="modal-city" href="https://n1912893.yclients.com/company/935885/personal/select-master/master-info/935885/2877529?o=m2877529" target="_blank" rel="noopener noreferrer"><img src="assets/petersburg.webp" alt="" width="179" height="179" /><span>Санкт-Петербург</span><strong aria-hidden="true">↗</strong></a>
+      </div>
+    </dialog>
+    <dialog class="modal" id="contactDialog" aria-labelledby="contactDialogTitle">
+      <div class="modal__body">
+        <button class="modal__close js-contact-close" type="button" aria-label="Закрыть">×</button>
+        <span class="eyebrow">Контактные данные</span>
+        <h2 class="display" id="contactDialogTitle">Контакт пока не указан</h2>
+        <p>Добавьте ссылку на аккаунт в настройках файла <code>yana-milos.js</code>.</p>
+        <button class="button button--primary js-contact-close" type="button">Понятно</button>
+      </div>
+    </dialog>
+  </body>
+</html>
