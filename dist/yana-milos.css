@@ -50,9 +50,7 @@ button:focus-visible, a:focus-visible { outline: 3px solid #91a18b; outline-offs
   overflow: hidden;
   isolation: isolate;
   padding: 25px 22px 22px;
-  background:
-    radial-gradient(ellipse at 77% 42%, #f0ece6 0%, rgba(231, 224, 215, 0.42) 55%, transparent 79%),
-    linear-gradient(145deg, #f4f0ea 0%, #e5ded4 100%);
+  background: #f0ebe4 url("assets/hero-silk-background.png") center / cover no-repeat;
 }
 .hero__copy { position: absolute; z-index: 4; top: 97px; left: 22px; }
 .hero__title {
