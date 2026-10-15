@@ -2,7 +2,7 @@ const CONTACTS = {
   telegram: "",
   whatsapp: "",
   instagram: "",
-  phone: "",
+  phone: "+7 (964) 360-93-30",
   moscowAddress: "",
   spbAddress: "",
 };

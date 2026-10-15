@@ -46,7 +46,7 @@ button:focus-visible, a:focus-visible { outline: 3px solid #91a18b; outline-offs
 
 .hero {
   position: relative;
-  min-height: 720px;
+  min-height: 850px;
   overflow: hidden;
   isolation: isolate;
   padding: 25px 22px 22px;
@@ -75,7 +75,7 @@ button:focus-visible, a:focus-visible { outline: 3px solid #91a18b; outline-offs
 .hero__quote {
   position: absolute;
   z-index: 4;
-  top: 361px;
+  top: 323px;
   left: 22px;
   width: 145px;
   margin: 0;
@@ -87,30 +87,17 @@ button:focus-visible, a:focus-visible { outline: 3px solid #91a18b; outline-offs
 .hero__portrait {
   position: absolute;
   z-index: 2;
-  right: -96px;
-  bottom: 67px;
-  width: 505px;
+  top: 221px;
+  right: -42px;
+  width: 355px;
   max-width: none;
   height: auto;
   pointer-events: none;
   filter: drop-shadow(0 9px 9px rgba(61, 52, 41, 0.12));
-  mask-image: linear-gradient(to bottom, #000 0%, #000 79%, transparent 100%);
-  animation: portrait-breathe 9s ease-in-out infinite;
+  mask-image: linear-gradient(to bottom, #000 0%, #000 91%, transparent 100%);
 }
-.hero__flower {
-  position: absolute;
-  z-index: 1;
-  top: -12px;
-  right: -35px;
-  width: 170px;
-  height: 310px;
-  object-fit: cover;
-  opacity: 0.17;
-  transform: rotate(5deg);
-  mask-image: linear-gradient(to bottom, #000, transparent 95%);
-  animation: botanical-sway 10s ease-in-out infinite;
-}
-.hero__actions { position: absolute; z-index: 6; right: 19px; bottom: 22px; left: 19px; display: grid; gap: 9px; }
+.hero__actions { position: absolute; z-index: 6; right: 19px; bottom: 16px; left: 19px; display: grid; gap: 7px; }
+.hero .button { min-height: 46px; padding-top: 10px; padding-bottom: 10px; font-size: 10px; }
 
 .button {
   position: relative;
@@ -201,44 +188,21 @@ button:focus-visible, a:focus-visible { outline: 3px solid #91a18b; outline-offs
 }
 .city-card > span:last-child { margin-top: 4px; color: var(--muted); font-size: 11px; }
 
-.values {
-  display: grid;
-  min-height: 116px;
-  grid-template-columns: repeat(3, 1fr);
-  align-items: center;
-  padding: 32px 12px;
-  background: #899084 url("assets/linen-botanical-background.webp") 63% 72% / auto 165% no-repeat;
-  color: #faf8f3;
-  text-align: center;
-}
-.values span { padding: 0 7px; font-size: 8px; line-height: 1.65; letter-spacing: 0.08em; text-transform: uppercase; }
-.values span + span { border-left: 1px solid rgba(255, 255, 255, 0.55); }
-
 .about { position: relative; overflow: hidden; padding: 26px 24px 38px; background: #f2efe8; }
-.about__flower {
-  position: absolute;
-  top: 80px;
-  right: -11px;
-  width: 119px;
-  height: 225px;
-  object-fit: cover;
-  opacity: 0.53;
-  mask-image: linear-gradient(90deg, transparent, #000 24%, #000 92%, transparent);
-  animation: botanical-sway 11s 1s ease-in-out infinite reverse;
-}
 .about__title {
   position: relative;
   z-index: 2;
-  max-width: 310px;
+  max-width: 350px;
   margin: 29px 0 25px;
   color: var(--green);
   font-size: 45px;
   line-height: 0.9;
   letter-spacing: -0.037em;
 }
-.about__copy { position: relative; z-index: 2; max-width: 296px; }
-.about__copy > p:not(.about__note) { margin: 0 0 17px; font-size: 12px; line-height: 1.85; }
-.about__note { margin: 23px 0 0; color: #83796d; font-size: 18px; line-height: 1.3; }
+.about__copy { position: relative; z-index: 2; max-width: 100%; }
+.about__copy > p { margin: 0 0 19px; font-size: 12px; line-height: 1.85; }
+.about__specialties { max-width: 345px; color: var(--green); font-weight: 600; }
+.about__subtitle { max-width: 340px; margin: 29px 0 17px; color: var(--green); font-size: 29px; font-weight: 500; line-height: 1; letter-spacing: -0.025em; }
 
 .contact { padding: 34px 24px calc(28px + env(safe-area-inset-bottom)); background: var(--paper); }
 .contact__header { display: flex; align-items: flex-end; justify-content: space-between; gap: 16px; margin-bottom: 21px; }
@@ -268,12 +232,15 @@ button:focus-visible, a:focus-visible { outline: 3px solid #91a18b; outline-offs
 .social:hover .social__arrow { transform: translateX(4px); }
 
 .contact-block { display: flex; min-height: 78px; align-items: center; gap: 14px; border-top: 1px solid var(--border); }
+a.contact-block { transition: color 180ms ease, transform 180ms ease; }
+a.contact-block:hover { color: var(--green); transform: translateX(2px); }
 .socials + .contact-block { margin-top: 29px; }
 .round-icon { display: grid; width: 40px; height: 40px; place-items: center; flex: 0 0 auto; border-radius: 50%; background: #eae8e1; color: var(--green); }
 .round-icon svg { width: 18px; height: 18px; }
 .contact-block small, .contact-block strong, .contact-block__value { display: block; }
 .contact-block small { margin-bottom: 5px; color: var(--muted); font-size: 8px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; }
 .contact-block strong { font-size: 24px; font-weight: 400; line-height: 1.05; letter-spacing: -0.02em; }
+.contact-block .phone-number { font-family: "Manrope", Arial, sans-serif; font-size: 20px; font-weight: 600; letter-spacing: 0.015em; }
 .contact-block__value { font-size: 13px; }
 
 .address-list { display: grid; gap: 9px; margin-top: 8px; }
@@ -328,7 +295,6 @@ button:focus-visible, a:focus-visible { outline: 3px solid #91a18b; outline-offs
 }
 .reveal-words.is-visible .word { opacity: 1; filter: blur(0); transform: translateY(0); }
 
-@keyframes portrait-breathe { 0%, 100% { transform: translate3d(0, 0, 0) scale(1); } 50% { transform: translate3d(0, -4px, 0) scale(1.008); } }
 @keyframes botanical-sway { 0%, 100% { transform: rotate(4deg) translateY(0); } 50% { transform: rotate(1deg) translateY(5px); } }
 @keyframes pin-pulse { 0%, 100% { transform: translateY(0); } 45% { transform: translateY(-3px); } 60% { transform: translateY(0); } }
 @keyframes modal-in { from { opacity: 0; transform: translateY(16px) scale(0.98); } to { opacity: 1; transform: translateY(0) scale(1); } }
@@ -339,10 +305,10 @@ button:focus-visible, a:focus-visible { outline: 3px solid #91a18b; outline-offs
 }
 
 @media (max-width: 359px) {
-  .hero { min-height: 680px; }
+  .hero { min-height: 820px; }
   .hero__title { font-size: 67px; }
-  .hero__portrait { right: -105px; width: 472px; }
-  .hero__quote { top: 344px; font-size: 19px; }
+  .hero__portrait { top: 221px; right: -42px; width: 330px; }
+  .hero__quote { top: 296px; font-size: 19px; }
   .city-card__image-wrap { height: 124px; }
   .about__title { font-size: 41px; }
 }
