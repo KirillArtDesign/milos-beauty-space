@@ -78,8 +78,7 @@ button:focus-visible, a:focus-visible { outline: 3px solid #91a18b; outline-offs
 .short-rule { display: block; width: 40px; height: 1px; margin: 25px 0 16px; background: var(--green); opacity: 0.64; }
 .hero__credentials { width: 218px; }
 .hero__credentials p { margin: 0; font-size: 12px; }
-.hero__award { color: var(--green); font-weight: 700; line-height: 1.45; }
-.hero__longevity { margin-top: 6px !important; color: #5f6659; font-weight: 600; line-height: 1.45; }
+.hero__longevity { color: #5f6659; font-weight: 600; line-height: 1.45; }
 .hero__directions {
   margin-top: 12px !important;
   color: var(--ink);
@@ -92,7 +91,7 @@ button:focus-visible, a:focus-visible { outline: 3px solid #91a18b; outline-offs
 .hero__quote {
   position: absolute;
   z-index: 4;
-  top: 455px;
+  top: 382px;
   left: 22px;
   width: 145px;
   margin: 0;
@@ -417,7 +416,7 @@ a.contact-block:hover { color: var(--green); transform: translateX(2px); }
   .hero { min-height: 820px; }
   .hero__title { font-size: 67px; }
   .hero__portrait { top: 221px; right: -105px; width: 380px; }
-  .hero__quote { top: 465px; font-size: 19px; }
+  .hero__quote { top: 382px; font-size: 19px; }
   .hero__credentials { width: 198px; }
   .city-card__image-wrap { height: 124px; }
   .about__title { font-size: 41px; }
