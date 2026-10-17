@@ -109,7 +109,7 @@ button:focus-visible, a:focus-visible { outline: 3px solid #91a18b; outline-offs
 .hero__quote {
   position: absolute;
   z-index: 4;
-  top: 382px;
+  top: clamp(382px, calc(382px + (100vw - 375px) * 0.5), 410px);
   left: 22px;
   width: 215px;
   margin: 0;
