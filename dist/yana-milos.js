@@ -13,6 +13,7 @@ const bookingDialog = document.querySelector("#bookingDialog");
 const consultationDialog = document.querySelector("#consultationDialog");
 const contactDialog = document.querySelector("#contactDialog");
 const equipmentDialog = document.querySelector("#equipmentDialog");
+const brandsDialog = document.querySelector("#brandsDialog");
 const contactDialogTitle = document.querySelector("#contactDialogTitle");
 const contactDialogCopy = document.querySelector("#contactDialogCopy");
 
@@ -42,7 +43,15 @@ document.querySelectorAll(".js-equipment-close").forEach((button) => {
   button.addEventListener("click", () => equipmentDialog.close());
 });
 
-[bookingDialog, consultationDialog, contactDialog, equipmentDialog].forEach((dialog) => {
+document.querySelectorAll(".js-brands").forEach((button) => {
+  button.addEventListener("click", () => brandsDialog.showModal());
+});
+
+document.querySelectorAll(".js-brands-close").forEach((button) => {
+  button.addEventListener("click", () => brandsDialog.close());
+});
+
+[bookingDialog, consultationDialog, contactDialog, equipmentDialog, brandsDialog].forEach((dialog) => {
   dialog.addEventListener("click", (event) => {
     if (event.target === dialog) dialog.close();
   });

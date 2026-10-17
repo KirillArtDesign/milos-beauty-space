@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Forum&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="yana-milos.css?v=20261017-7" />
+    <link rel="stylesheet" href="yana-milos.css?v=20261017-8" />
     <script src="yana-milos.js" defer></script>
   </head>
   <body>
@@ -95,6 +95,9 @@
           <h3 class="display about__equipment-title reveal-words">Обладаю значительным опытом работы с передовым оборудованием</h3>
           <button class="button equipment-trigger js-equipment" type="button" data-reveal>
             <span>Аппараты</span><span class="button__arrow" aria-hidden="true">→</span>
+          </button>
+          <button class="button brand-trigger js-brands" type="button" data-reveal>
+            <span>Бренды препаратов</span><span class="button__arrow" aria-hidden="true">→</span>
           </button>
           <h3 class="display about__subtitle reveal-words">Комплексный подход и долголетие 🌿🧬</h3>
           <p class="reveal-words">Моя философия выходит за рамки эстетической косметологии. Я практикую грамотный комплексный подход к здоровью, питанию и восстановлению. В работе опираюсь на современные концепции лонджевити (longevity) и pro-age медицины, направленные на активное долголетие и улучшение качества жизни с возрастом. Консультативный приём включает подбор стратегий питания, восстановления и антивозрастных программ.</p>
@@ -196,7 +199,7 @@
           </article>
           <article class="equipment-card equipment-card--wide-image">
             <div class="equipment-card__image"><img src="assets/equipment/ultraformer-iii.png" alt="Аппарат Ultraformer III" width="720" height="400" loading="lazy" /></div>
-            <div><h3>Ultraformer III</h3><p>SMAS-лифтинг — ультразвуковая подтяжка.</p></div>
+            <div><h3>Ultraformer MPT </h3><p>SMAS-лифтинг — ультразвуковая подтяжка.</p></div>
           </article>
           <article class="equipment-card equipment-card--wide-image">
             <div class="equipment-card__image"><img src="assets/equipment/volnewmer.png" alt="Аппарат Volnewmer" width="720" height="400" loading="lazy" /></div>
@@ -212,6 +215,20 @@
           </article>
         </div>
         <p class="equipment-modal__note">Также работаю с другими современными аппаратными и инъекционными методиками.</p>
+      </div>
+    </dialog>
+    <dialog class="modal brand-modal" id="brandsDialog" aria-labelledby="brandsTitle">
+      <div class="modal__body">
+        <button class="modal__close js-brands-close" type="button" aria-label="Закрыть">×</button>
+        <span class="eyebrow">Профессиональный уход</span>
+        <h2 class="display" id="brandsTitle">Бренды препаратов</h2>
+        <p>В работе использую профессиональные продукты брендов:</p>
+        <div class="brand-list">
+          <article class="brand-card"><span>01</span><h3>Cell Fusion C</h3></article>
+          <article class="brand-card"><span>02</span><h3>HydroPeptide</h3></article>
+          <article class="brand-card"><span>03</span><h3>Arosha</h3></article>
+          <article class="brand-card"><span>04</span><h3>QMS</h3></article>
+        </div>
       </div>
     </dialog>
   </body>
