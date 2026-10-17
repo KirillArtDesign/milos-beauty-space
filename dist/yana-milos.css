@@ -22,7 +22,7 @@ button, a { color: inherit; font: inherit; -webkit-tap-highlight-color: transpar
 button { cursor: pointer; }
 a { text-decoration: none; }
 button:focus-visible, a:focus-visible { outline: 3px solid #91a18b; outline-offset: 3px; }
-.display { font-family: "Cormorant Garamond", Georgia, serif; font-weight: 400; }
+.display { font-family: "Forum", Georgia, serif; font-weight: 400; }
 
 .page-shell {
   width: min(100%, 430px);
@@ -387,7 +387,7 @@ a.contact-block:hover { color: var(--green); transform: translateX(2px); }
 .equipment-card__image { display: grid; width: 106px; height: 106px; place-items: center; overflow: hidden; border-radius: 9px; background: #e7e2d9; }
 .equipment-card__image img { width: 100%; height: 100%; object-fit: contain; }
 .equipment-card--wide-image .equipment-card__image img { width: 116%; max-width: none; }
-.equipment-card h3 { margin: 0 0 7px; color: var(--green); font-family: "Cormorant Garamond", Georgia, serif; font-size: 22px; font-weight: 600; line-height: 1; }
+.equipment-card h3 { margin: 0 0 7px; color: var(--green); font-family: "Forum", Georgia, serif; font-size: 22px; font-weight: 400; line-height: 1; }
 .equipment-card p { margin: 0; color: var(--muted); font-size: 10px; line-height: 1.55; }
 .equipment-modal .equipment-modal__note { margin: 18px 2px 0; color: var(--green); font-size: 10px; font-weight: 600; line-height: 1.6; }
 
