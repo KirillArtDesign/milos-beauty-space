@@ -393,22 +393,26 @@ a.contact-block:hover { color: var(--green); transform: translateX(2px); }
 .equipment-card p { margin: 0; color: var(--muted); font-size: 10px; line-height: 1.55; }
 .equipment-modal .equipment-modal__note { margin: 18px 2px 0; color: var(--green); font-size: 10px; font-weight: 600; line-height: 1.6; }
 
-.brand-modal { width: min(calc(100vw - 32px), 398px); }
+.brand-modal { width: min(calc(100vw - 32px), 398px); max-height: calc(100dvh - 24px); }
+.brand-modal .modal__body { max-height: calc(100dvh - 24px); overflow-y: auto; overscroll-behavior: contain; }
 .brand-modal h2 { max-width: 310px; font-size: 42px; }
 .brand-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 9px; }
 .brand-card {
-  position: relative;
   display: flex;
-  min-height: 112px;
-  align-items: flex-end;
-  padding: 17px 14px;
+  min-width: 0;
+  flex-direction: column;
   overflow: hidden;
   border: 1px solid #d8d2c8;
   border-radius: 13px;
   background: #efebe4;
 }
-.brand-card span { position: absolute; top: 11px; right: 12px; color: #929088; font-size: 8px; font-weight: 700; letter-spacing: 0.12em; }
-.brand-card h3 { margin: 0; color: var(--green); font-family: "Forum", Georgia, serif; font-size: 24px; font-weight: 400; line-height: 1; }
+.brand-card__image { height: 112px; overflow: hidden; background: #e7e2d9; }
+.brand-card__image img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.brand-card--contain .brand-card__image { background: #fff; }
+.brand-card--contain .brand-card__image img { object-fit: contain; }
+.brand-card__copy { position: relative; display: flex; min-height: 66px; align-items: flex-end; padding: 20px 12px 12px; }
+.brand-card span { position: absolute; top: 8px; right: 10px; color: #929088; font-size: 8px; font-weight: 700; letter-spacing: 0.12em; }
+.brand-card h3 { margin: 0; color: var(--green); font-family: "Forum", Georgia, serif; font-size: 21px; font-weight: 400; line-height: 1; overflow-wrap: anywhere; }
 
 [data-reveal], .word { opacity: 0; }
 [data-reveal] { transform: translateY(12px); transition: opacity 650ms ease, transform 650ms cubic-bezier(0.2, 0.7, 0.2, 1); }
