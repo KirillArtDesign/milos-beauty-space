@@ -2,12 +2,11 @@ const CONTACTS = {
   telegram: "https://t.me/Janika_Milos",
   whatsapp: "https://wa.me/79643609330",
   max: "https://max.ru/u/f9LHodD0cOJP_XriyFq96zpejX462YICNQSu0l-rrEgobjeBadGBpzMclVM",
-  instagram: "",
   phone: "+7 (964) 360-93-30",
   moscowAddress: "Садовническая, дом 5",
   spbAddress: "Каменноостровский проспект, 10, лит. Б",
 };
-const CONTACT_LABELS = { telegram: "Telegram", whatsapp: "WhatsApp", max: "MAX", instagram: "Instagram" };
+const CONTACT_LABELS = { telegram: "Telegram", whatsapp: "WhatsApp", max: "MAX" };
 
 const bookingDialog = document.querySelector("#bookingDialog");
 const consultationDialog = document.querySelector("#consultationDialog");
