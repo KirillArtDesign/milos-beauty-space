@@ -117,8 +117,10 @@ button:focus-visible, a:focus-visible { outline: 3px solid #91a18b; outline-offs
   font-size: 21px;
   line-height: 1.11;
   letter-spacing: -0.02em;
-  text-align: center;
+  text-align: left;
 }
+.hero__quote-line { display: block; }
+.hero__quote-line--center { text-align: center; }
 .hero__portrait {
   position: absolute;
   z-index: 2;
