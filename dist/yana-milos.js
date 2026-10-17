@@ -1,14 +1,20 @@
 const CONTACTS = {
   telegram: "",
-  whatsapp: "",
+  whatsapp: "https://wa.me/79643609330",
+  max: "",
   instagram: "",
   phone: "+7 (964) 360-93-30",
-  moscowAddress: "",
-  spbAddress: "",
+  moscowAddress: "Садовническая, дом 5",
+  spbAddress: "Каменноостровский проспект, 10, лит. Б",
 };
+const CONTACT_LABELS = { telegram: "Telegram", whatsapp: "WhatsApp", max: "MAX", instagram: "Instagram" };
 
 const bookingDialog = document.querySelector("#bookingDialog");
+const consultationDialog = document.querySelector("#consultationDialog");
 const contactDialog = document.querySelector("#contactDialog");
+const equipmentDialog = document.querySelector("#equipmentDialog");
+const contactDialogTitle = document.querySelector("#contactDialogTitle");
+const contactDialogCopy = document.querySelector("#contactDialogCopy");
 
 document.querySelectorAll(".js-book").forEach((button) => {
   button.addEventListener("click", () => bookingDialog.showModal());
@@ -16,24 +22,53 @@ document.querySelectorAll(".js-book").forEach((button) => {
 
 document.querySelector(".js-booking-close").addEventListener("click", () => bookingDialog.close());
 
+document.querySelectorAll(".js-consult").forEach((button) => {
+  button.addEventListener("click", () => consultationDialog.showModal());
+});
+
+document.querySelectorAll(".js-consultation-close").forEach((button) => {
+  button.addEventListener("click", () => consultationDialog.close());
+});
+
 document.querySelectorAll(".js-contact-close").forEach((button) => {
   button.addEventListener("click", () => contactDialog.close());
 });
 
-[bookingDialog, contactDialog].forEach((dialog) => {
+document.querySelectorAll(".js-equipment").forEach((button) => {
+  button.addEventListener("click", () => equipmentDialog.showModal());
+});
+
+document.querySelectorAll(".js-equipment-close").forEach((button) => {
+  button.addEventListener("click", () => equipmentDialog.close());
+});
+
+[bookingDialog, consultationDialog, contactDialog, equipmentDialog].forEach((dialog) => {
   dialog.addEventListener("click", (event) => {
     if (event.target === dialog) dialog.close();
   });
 });
 
+const openContact = (contact, label = "Контакт") => {
+  const url = CONTACTS[contact];
+  if (url && /^https:\/\//i.test(url)) {
+    window.open(url, "_blank", "noopener,noreferrer");
+    return;
+  }
+  contactDialogTitle.textContent = `${label} пока не подключён`;
+  contactDialogCopy.textContent = `Ссылка для связи через ${label} пока не указана.`;
+  contactDialog.showModal();
+};
+
 document.querySelectorAll(".js-contact").forEach((button) => {
   button.addEventListener("click", () => {
-    const url = CONTACTS[button.dataset.contact];
-    if (url && /^https:\/\//i.test(url)) {
-      window.open(url, "_blank", "noopener,noreferrer");
-      return;
-    }
-    contactDialog.showModal();
+    openContact(button.dataset.contact, CONTACT_LABELS[button.dataset.contact]);
+  });
+});
+
+document.querySelectorAll(".js-consult-channel").forEach((button) => {
+  button.addEventListener("click", () => {
+    consultationDialog.close();
+    openContact(button.dataset.contact, button.dataset.contactLabel);
   });
 });
 

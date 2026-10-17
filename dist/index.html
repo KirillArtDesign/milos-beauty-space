@@ -4,38 +4,41 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
     <meta name="theme-color" content="#e8e2d8" />
-    <meta name="description" content="Яна Милос — врач-косметолог. Эстетическая косметология, индивидуальный уход и приём в Москве и Санкт-Петербурге." />
+    <meta name="description" content="Яна Милос — врач-косметолог и основатель бьюти-центра «Пространство Красоты» в Санкт-Петербурге. Эстетическая, аппаратная и инъекционная косметология." />
     <title>Яна Милос — врач-косметолог</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="yana-milos.css?v=20261015-2" />
+    <link rel="stylesheet" href="yana-milos.css?v=20261017-4" />
     <script src="yana-milos.js" defer></script>
   </head>
   <body>
     <main class="page-shell">
       <section class="hero" aria-labelledby="hero-title">
-        <div class="topline" data-reveal>
-          <span class="eyebrow">Врач-косметолог</span>
-          <span class="topline__rule" aria-hidden="true"></span>
+        <div class="topline hero__topline" data-reveal>
+          <p class="hero__meta">Врач-косметолог<br />Основатель бьюти-центра «Пространство Красоты» в Санкт-Петербурге</p>
         </div>
 
         <div class="hero__copy">
           <h1 class="display hero__title reveal-words" id="hero-title">Яна<br />Милос</h1>
           <span class="short-rule" aria-hidden="true"></span>
-          <p class="hero__field reveal-words">Эстетическая косметология</p>
+          <div class="hero__credentials">
+            <p class="hero__award reveal-words">🏆 «Лучший старт года»</p>
+            <p class="hero__longevity reveal-words">Longevity &amp; Pro-age ⚕️</p>
+            <p class="hero__directions reveal-words">| Эстетическая | Аппаратная |<br />Инъекционная косметология</p>
+          </div>
         </div>
 
         <p class="display hero__quote reveal-words">Красота<br />в гармонии<br />с вами</p>
-        <img class="hero__portrait" src="assets/yana-milos-portrait.png" alt="Яна Милос — врач-косметолог" width="429" height="753" fetchpriority="high" />
+        <img class="hero__portrait" src="assets/f4bf094a-fdf9-4113-a74d-6751105286e1.png" alt="Яна Милос — врач-косметолог" width="1024" height="1536" fetchpriority="high" />
 
         <div class="hero__actions" data-reveal>
           <button class="button button--primary js-book" type="button">
             <span>Записаться</span><span class="button__arrow" aria-hidden="true">→</span>
           </button>
-          <button class="button button--glass js-contact" type="button" data-contact="telegram">
-            <svg class="button__icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m21.4 4-3.2 15.7c-.2 1.1-.8 1.4-1.7.9L12 17.1l-2.2 2.2c-.3.3-.5.5-1 .5l.4-4.9 8.9-8c.4-.4-.1-.6-.6-.3L6.6 13.5 2 12.1c-1-.3-1-1 .2-1.5L20 3.7c.8-.3 1.6.2 1.4.3Z" /></svg>
-            <span>Написать в Telegram</span><span class="button__arrow" aria-hidden="true">→</span>
+          <button class="button button--glass js-consult" type="button">
+            <svg class="button__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M4 5.5h16v11H9l-5 3v-14Z" /><path d="M8 10h8M8 13h5" /></svg>
+            <span>Получить консультацию</span><span class="button__arrow" aria-hidden="true">→</span>
           </button>
         </div>
       </section>
@@ -57,6 +60,28 @@
         </div>
       </section>
 
+      <section class="consultations" aria-labelledby="consultations-title">
+        <div class="topline" data-reveal>
+          <h2 class="eyebrow" id="consultations-title">Персональные консультации</h2>
+          <span class="topline__rule" aria-hidden="true"></span>
+        </div>
+        <div class="consultations__list">
+          <button class="consultation-card js-book" type="button" data-reveal>
+            <span class="consultation-card__label">Платная консультация</span>
+            <span class="consultation-card__title">Персональный подбор ухода</span>
+            <strong>3 000 ₽</strong>
+            <span class="consultation-card__arrow" aria-hidden="true">→</span>
+          </button>
+          <button class="consultation-card js-book" type="button" data-reveal>
+            <span class="consultation-card__label">Платная консультация</span>
+            <span class="consultation-card__title">Индивидуальный косметологический протокол</span>
+            <strong>3 000 ₽</strong>
+            <span class="consultation-card__arrow" aria-hidden="true">→</span>
+          </button>
+        </div>
+        <p class="consultations__note" data-reveal>При записи на процедуру сумма консультации вычитается из её стоимости.</p>
+      </section>
+
       <section class="about" aria-labelledby="about-title">
         <div class="topline" data-reveal><span class="eyebrow">Обо мне</span><span class="topline__rule" aria-hidden="true"></span></div>
         <h2 class="display about__title reveal-words" id="about-title">Врач-косметолог</h2>
@@ -65,6 +90,16 @@
           <h3 class="display about__subtitle reveal-words">Руководство и достижения</h3>
           <p class="reveal-words">Являюсь основателем и руководителем бьюти-центра «Пространство Красоты» в Санкт-Петербурге. В этом году наш центр был удостоен награды «Лучший старт года», что подтверждает высокий уровень сервиса и доверие клиентов.</p>
           <p class="reveal-words">В бьюти-сфере я с 2008 года, а с 2020 года веду приём как врач-косметолог. Мой подход базируется на доказательной медицине, безопасности и бескомпромиссном качестве.</p>
+          <h3 class="display about__subtitle reveal-words">Экспертиза и услуги 💎</h3>
+          <p class="reveal-words">Я специализируюсь на комплексном омоложении и коррекции эстетических недостатков. В работе использую исключительно премиальные препараты и продукты, сотрудничаю с передовыми международными брендами эстетической медицины, что гарантирует доказанную эффективность и безопасность процедур. Владею широким спектром инъекционных методик: биоревитализация, мезотерапия, плазмолифтинг и другие. Провожу профессиональный подбор домашнего ухода для укрепления результата.</p>
+          <p class="reveal-words">Работаю как в самостоятельной практике, так и в командном режиме — в связке с высококвалифицированными врачами мы ведём пациента до необходимого результата.</p>
+          <button class="button equipment-trigger js-equipment" type="button" data-reveal>
+            <span>Аппараты</span><span class="button__arrow" aria-hidden="true">→</span>
+          </button>
+          <h3 class="display about__subtitle reveal-words">Комплексный подход и долголетие 🌿🧬</h3>
+          <p class="reveal-words">Моя философия выходит за рамки эстетической косметологии. Я практикую грамотный комплексный подход к здоровью, питанию и восстановлению. В работе опираюсь на современные концепции лонджевити (longevity) и pro-age медицины, направленные на активное долголетие и улучшение качества жизни с возрастом. Консультативный приём включает подбор стратегий питания, восстановления и антивозрастных программ.</p>
+          <h3 class="display about__subtitle reveal-words">Личный статус 🏅</h3>
+          <p class="reveal-words">Вице-чемпионка Федерации Бодибилдинга в номинации «Фит-модель». Спортивная дисциплина и знание анатомии позволяют мне достигать точных результатов в моделировании контуров тела и работе с возрастными изменениями.</p>
         </div>
       </section>
 
@@ -98,8 +133,8 @@
         </div>
 
         <div class="address-list">
-          <article class="address" data-reveal><img src="assets/moscow.webp" alt="Москва" width="182" height="179" loading="lazy" /><div><h3>Москва</h3><p id="moscowAddress">Адрес уточняется</p></div></article>
-          <article class="address" data-reveal><img src="assets/petersburg.webp" alt="Санкт-Петербург" width="179" height="179" loading="lazy" /><div><h3>Санкт-Петербург</h3><p id="spbAddress">Адрес уточняется</p></div></article>
+          <article class="address" data-reveal><img src="assets/moscow.webp" alt="Москва" width="182" height="179" loading="lazy" /><div><h3>Москва</h3><p id="moscowAddress">Садовническая, дом 5</p></div></article>
+          <article class="address" data-reveal><img src="assets/petersburg.webp" alt="Санкт-Петербург" width="179" height="179" loading="lazy" /><div><h3>Санкт-Петербург</h3><p id="spbAddress">Каменноостровский проспект, 10, лит. Б</p></div></article>
         </div>
         <button class="button button--primary contact__book js-book" type="button" data-reveal><span>Записаться на приём</span><span class="button__arrow" aria-hidden="true">→</span></button>
         <p class="footer-credit">Яна Милос · врач-косметолог</p>
@@ -116,13 +151,67 @@
         <a class="modal-city" href="https://n1912893.yclients.com/company/935885/personal/select-master/master-info/935885/2877529?o=m2877529" target="_blank" rel="noopener noreferrer"><img src="assets/petersburg.webp" alt="" width="179" height="179" /><span>Санкт-Петербург</span><strong aria-hidden="true">↗</strong></a>
       </div>
     </dialog>
+    <dialog class="modal consultation-modal" id="consultationDialog" aria-labelledby="consultationTitle">
+      <div class="modal__body">
+        <button class="modal__close js-consultation-close" type="button" aria-label="Закрыть">×</button>
+        <span class="eyebrow">Консультация</span>
+        <h2 class="display" id="consultationTitle">Выберите канал связи</h2>
+        <p>Напишите Яне в удобном для вас мессенджере.</p>
+        <div class="consultation-channels">
+          <button class="channel-option js-consult-channel" type="button" data-contact="telegram" data-contact-label="Telegram">
+            <span class="channel-option__mark">TG</span><span>Telegram</span><strong aria-hidden="true">→</strong>
+          </button>
+          <button class="channel-option js-consult-channel" type="button" data-contact="whatsapp" data-contact-label="WhatsApp">
+            <span class="channel-option__mark">WA</span><span>WhatsApp</span><strong aria-hidden="true">→</strong>
+          </button>
+          <button class="channel-option js-consult-channel" type="button" data-contact="max" data-contact-label="MAX">
+            <span class="channel-option__mark">M</span><span>MAX</span><strong aria-hidden="true">→</strong>
+          </button>
+        </div>
+      </div>
+    </dialog>
     <dialog class="modal" id="contactDialog" aria-labelledby="contactDialogTitle">
       <div class="modal__body">
         <button class="modal__close js-contact-close" type="button" aria-label="Закрыть">×</button>
         <span class="eyebrow">Контактные данные</span>
         <h2 class="display" id="contactDialogTitle">Контакт пока не указан</h2>
-        <p>Добавьте ссылку на аккаунт в настройках файла <code>yana-milos.js</code>.</p>
+        <p id="contactDialogCopy">Ссылка на этот мессенджер пока не указана.</p>
         <button class="button button--primary js-contact-close" type="button">Понятно</button>
+      </div>
+    </dialog>
+    <dialog class="modal equipment-modal" id="equipmentDialog" aria-labelledby="equipmentTitle">
+      <div class="modal__body">
+        <button class="modal__close js-equipment-close" type="button" aria-label="Закрыть">×</button>
+        <span class="eyebrow">Аппаратная косметология</span>
+        <h2 class="display" id="equipmentTitle">Аппараты</h2>
+        <p>Обладаю значительным опытом работы с передовым оборудованием:</p>
+        <div class="equipment-list">
+          <article class="equipment-card">
+            <div class="equipment-card__image"><img src="assets/equipment/lumecca.png" alt="Аппарат Lumecca" width="628" height="1000" loading="lazy" /></div>
+            <div><h3>Lumecca</h3><p>Фотоомоложение и борьба с пигментацией.</p></div>
+          </article>
+          <article class="equipment-card">
+            <div class="equipment-card__image"><img src="assets/equipment/morpheus8.png" alt="Аппарат Morpheus8" width="628" height="1000" loading="lazy" /></div>
+            <div><h3>Morpheus8</h3><p>Микроигольчатый RF-лифтинг.</p></div>
+          </article>
+          <article class="equipment-card equipment-card--wide-image">
+            <div class="equipment-card__image"><img src="assets/equipment/ultraformer-iii.png" alt="Аппарат Ultraformer III" width="720" height="400" loading="lazy" /></div>
+            <div><h3>Ultraformer III</h3><p>SMAS-лифтинг — ультразвуковая подтяжка.</p></div>
+          </article>
+          <article class="equipment-card equipment-card--wide-image">
+            <div class="equipment-card__image"><img src="assets/equipment/volnewmer.png" alt="Аппарат Volnewmer" width="720" height="400" loading="lazy" /></div>
+            <div><h3>Volnewmer</h3><p>RF-лифтинг и моделирование контуров лица и тела.</p></div>
+          </article>
+          <article class="equipment-card">
+            <div class="equipment-card__image"><img src="assets/equipment/endospheres.png" alt="Аппарат Endospheres" width="480" height="950" loading="lazy" /></div>
+            <div><h3>Эндосфера / RSL</h3><p>Аппаратный лимфодренаж, коррекция фигуры и улучшение качества кожи.</p></div>
+          </article>
+          <article class="equipment-card">
+            <div class="equipment-card__image"><img src="assets/equipment/hydrafacial.png" alt="Аппарат HydraFacial" width="1000" height="1000" loading="lazy" /></div>
+            <div><h3>HydraFacial</h3><p>Аппаратная чистка, увлажнение и обновление кожи.</p></div>
+          </article>
+        </div>
+        <p class="equipment-modal__note">Также работаю с другими современными аппаратными и инъекционными методиками.</p>
       </div>
     </dialog>
   </body>

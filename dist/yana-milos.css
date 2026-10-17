@@ -56,6 +56,17 @@ button:focus-visible, a:focus-visible { outline: 3px solid #91a18b; outline-offs
   background-size: cover;
   background-repeat: no-repeat;
 }
+.hero__topline { display: block; width: 100%; }
+.hero__meta {
+  width: 100%;
+  margin: 0;
+  color: var(--green);
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 1.45;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
 .hero__copy { position: absolute; z-index: 4; top: 97px; left: 22px; }
 .hero__title {
   margin: 0;
@@ -65,19 +76,23 @@ button:focus-visible, a:focus-visible { outline: 3px solid #91a18b; outline-offs
   letter-spacing: -0.055em;
 }
 .short-rule { display: block; width: 40px; height: 1px; margin: 25px 0 16px; background: var(--green); opacity: 0.64; }
-.hero__field {
-  max-width: 155px;
-  margin: 0;
-  font-size: 9px;
-  font-weight: 600;
-  line-height: 1.85;
-  letter-spacing: 0.17em;
+.hero__credentials { width: 218px; }
+.hero__credentials p { margin: 0; font-size: 12px; }
+.hero__award { color: var(--green); font-weight: 700; line-height: 1.45; }
+.hero__longevity { margin-top: 6px !important; color: #5f6659; font-weight: 600; line-height: 1.45; }
+.hero__directions {
+  margin-top: 12px !important;
+  color: var(--ink);
+  font-size: 10px !important;
+  font-weight: 700;
+  line-height: 1.55;
+  letter-spacing: 0.04em;
   text-transform: uppercase;
 }
 .hero__quote {
   position: absolute;
   z-index: 4;
-  top: 323px;
+  top: 455px;
   left: 22px;
   width: 145px;
   margin: 0;
@@ -90,8 +105,8 @@ button:focus-visible, a:focus-visible { outline: 3px solid #91a18b; outline-offs
   position: absolute;
   z-index: 2;
   top: 221px;
-  right: -42px;
-  width: 355px;
+  right: -105px;
+  width: 405px;
   max-width: none;
   height: auto;
   pointer-events: none;
@@ -189,6 +204,42 @@ button:focus-visible, a:focus-visible { outline: 3px solid #91a18b; outline-offs
 }
 .city-card > span:last-child { margin-top: 4px; color: var(--muted); font-size: 11px; }
 
+.consultations { padding: 30px 20px 32px; background: #e9e5dd; }
+.consultations .topline { margin: 0 4px 20px; }
+.consultations .eyebrow { margin: 0; }
+.consultations__list { display: grid; gap: 9px; }
+.consultation-card {
+  position: relative;
+  display: grid;
+  width: 100%;
+  min-height: 112px;
+  grid-template-columns: 1fr auto;
+  align-content: center;
+  gap: 7px 18px;
+  padding: 19px 53px 19px 20px;
+  border: 1px solid rgba(47, 70, 54, 0.25);
+  border-radius: 17px;
+  background: rgba(248, 246, 241, 0.75);
+  color: var(--green);
+  text-align: left;
+  transition: transform 180ms ease, border-color 180ms ease, background 180ms ease;
+}
+.consultation-card:hover { transform: translateY(-2px); border-color: var(--green); background: var(--paper); }
+.consultation-card:active { transform: scale(0.99); }
+.consultation-card__label {
+  grid-column: 1 / -1;
+  color: #7f776c;
+  font-size: 7px;
+  font-weight: 700;
+  letter-spacing: 0.17em;
+  text-transform: uppercase;
+}
+.consultation-card__title { max-width: 240px; font-size: 13px; font-weight: 600; line-height: 1.35; }
+.consultation-card strong { align-self: end; font-size: 12px; font-weight: 700; white-space: nowrap; }
+.consultation-card__arrow { position: absolute; top: 50%; right: 19px; font-size: 24px; line-height: 1; transform: translateY(-50%); transition: transform 180ms ease; }
+.consultation-card:hover .consultation-card__arrow { transform: translate(4px, -50%); }
+.consultations__note { margin: 15px 5px 0; color: #716d66; font-size: 9px; line-height: 1.65; }
+
 .about { position: relative; overflow: hidden; padding: 26px 24px 38px; background: #f2efe8; }
 .about__title {
   position: relative;
@@ -204,6 +255,8 @@ button:focus-visible, a:focus-visible { outline: 3px solid #91a18b; outline-offs
 .about__copy > p { margin: 0 0 19px; font-size: 12px; line-height: 1.85; }
 .about__specialties { max-width: 345px; color: var(--green); font-weight: 600; }
 .about__subtitle { max-width: 340px; margin: 29px 0 17px; color: var(--green); font-size: 29px; font-weight: 500; line-height: 1; letter-spacing: -0.025em; }
+.equipment-trigger { width: auto; min-width: 174px; margin: 26px 0 34px; padding-right: 52px; }
+.equipment-trigger + .about__subtitle { margin-top: 0; }
 
 .contact { padding: 34px 24px calc(28px + env(safe-area-inset-bottom)); background: var(--paper); }
 .contact__header { display: flex; align-items: flex-end; justify-content: space-between; gap: 16px; margin-bottom: 21px; }
@@ -284,6 +337,61 @@ a.contact-block:hover { color: var(--green); transform: translateX(2px); }
 .modal-city span { flex: 1; font-size: 15px; font-weight: 600; }
 .modal-city strong { color: var(--green); font-size: 25px; font-weight: 400; }
 
+.consultation-modal h2 { max-width: 310px; font-size: 41px; }
+.consultation-channels { display: grid; gap: 9px; }
+.channel-option {
+  display: grid;
+  min-height: 58px;
+  grid-template-columns: 34px 1fr auto;
+  gap: 12px;
+  align-items: center;
+  width: 100%;
+  padding: 10px 16px 10px 11px;
+  border: 1px solid #c7cec2;
+  border-radius: 999px;
+  background: #f1efe9;
+  color: var(--green);
+  text-align: left;
+  transition: transform 180ms ease, border-color 180ms ease, background 180ms ease;
+}
+.channel-option:hover { transform: translateX(2px); border-color: var(--green); background: #e7ebe4; }
+.channel-option:active { transform: scale(0.99); }
+.channel-option__mark { display: grid; width: 34px; height: 34px; place-items: center; border-radius: 50%; background: var(--green); color: #fff; font-size: 10px; font-weight: 700; letter-spacing: 0.04em; }
+.channel-option > span:nth-child(2) { font-size: 13px; font-weight: 700; }
+.channel-option strong { font-size: 21px; font-weight: 400; }
+
+.equipment-modal {
+  width: min(calc(100vw - 24px), 410px);
+  max-height: calc(100dvh - 24px);
+  border-radius: 18px;
+}
+.equipment-modal .modal__body {
+  max-height: calc(100dvh - 24px);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  padding: 32px 20px 25px;
+}
+.equipment-modal h2 { margin-bottom: 8px; }
+.equipment-modal > .modal__body > p { margin-bottom: 18px; }
+.equipment-list { display: grid; gap: 9px; }
+.equipment-card {
+  display: grid;
+  min-height: 122px;
+  grid-template-columns: 106px 1fr;
+  gap: 14px;
+  align-items: center;
+  padding: 8px 13px 8px 8px;
+  border: 1px solid #ddd7cd;
+  border-radius: 13px;
+  background: #f0ede7;
+}
+.equipment-card__image { display: grid; width: 106px; height: 106px; place-items: center; overflow: hidden; border-radius: 9px; background: #e7e2d9; }
+.equipment-card__image img { width: 100%; height: 100%; object-fit: contain; }
+.equipment-card--wide-image .equipment-card__image img { width: 116%; max-width: none; }
+.equipment-card h3 { margin: 0 0 7px; color: var(--green); font-family: "Cormorant Garamond", Georgia, serif; font-size: 22px; font-weight: 600; line-height: 1; }
+.equipment-card p { margin: 0; color: var(--muted); font-size: 10px; line-height: 1.55; }
+.equipment-modal .equipment-modal__note { margin: 18px 2px 0; color: var(--green); font-size: 10px; font-weight: 600; line-height: 1.6; }
+
 [data-reveal], .word { opacity: 0; }
 [data-reveal] { transform: translateY(12px); transition: opacity 650ms ease, transform 650ms cubic-bezier(0.2, 0.7, 0.2, 1); }
 [data-reveal].is-visible { opacity: 1; transform: translateY(0); }
@@ -308,10 +416,14 @@ a.contact-block:hover { color: var(--green); transform: translateX(2px); }
 @media (max-width: 359px) {
   .hero { min-height: 820px; }
   .hero__title { font-size: 67px; }
-  .hero__portrait { top: 221px; right: -42px; width: 330px; }
-  .hero__quote { top: 296px; font-size: 19px; }
+  .hero__portrait { top: 221px; right: -105px; width: 380px; }
+  .hero__quote { top: 465px; font-size: 19px; }
+  .hero__credentials { width: 198px; }
   .city-card__image-wrap { height: 124px; }
   .about__title { font-size: 41px; }
+  .consultation-card { padding-right: 46px; padding-left: 16px; }
+  .equipment-card { grid-template-columns: 92px 1fr; gap: 11px; }
+  .equipment-card__image { width: 92px; height: 98px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
