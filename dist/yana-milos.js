@@ -16,8 +16,18 @@ const brandsDialog = document.querySelector("#brandsDialog");
 const contactDialogTitle = document.querySelector("#contactDialogTitle");
 const contactDialogCopy = document.querySelector("#contactDialogCopy");
 
+const loadDialogImages = (dialog) => {
+  dialog.querySelectorAll("img[data-src]").forEach((image) => {
+    image.src = image.dataset.src;
+    image.removeAttribute("data-src");
+  });
+};
+
 document.querySelectorAll(".js-book").forEach((button) => {
-  button.addEventListener("click", () => bookingDialog.showModal());
+  button.addEventListener("click", () => {
+    loadDialogImages(bookingDialog);
+    bookingDialog.showModal();
+  });
 });
 
 document.querySelector(".js-booking-close").addEventListener("click", () => bookingDialog.close());
@@ -35,7 +45,10 @@ document.querySelectorAll(".js-contact-close").forEach((button) => {
 });
 
 document.querySelectorAll(".js-equipment").forEach((button) => {
-  button.addEventListener("click", () => equipmentDialog.showModal());
+  button.addEventListener("click", () => {
+    loadDialogImages(equipmentDialog);
+    equipmentDialog.showModal();
+  });
 });
 
 document.querySelectorAll(".js-equipment-close").forEach((button) => {
@@ -43,7 +56,10 @@ document.querySelectorAll(".js-equipment-close").forEach((button) => {
 });
 
 document.querySelectorAll(".js-brands").forEach((button) => {
-  button.addEventListener("click", () => brandsDialog.showModal());
+  button.addEventListener("click", () => {
+    loadDialogImages(brandsDialog);
+    brandsDialog.showModal();
+  });
 });
 
 document.querySelectorAll(".js-brands-close").forEach((button) => {
