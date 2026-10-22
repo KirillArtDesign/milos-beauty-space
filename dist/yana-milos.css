@@ -147,13 +147,13 @@ button:focus-visible, a:focus-visible { outline: 3px solid #91a18b; outline-offs
   width: 185px;
   margin: 0;
   color: #69715f;
-  font-size: 21px;
   line-height: 1.11;
   letter-spacing: -0.02em;
   text-align: left;
 }
 .hero__quote-line { display: block; }
-.hero__quote-line--center { text-align: center; }
+.hero__quote-line--areas { font-size: 15px; letter-spacing: -0.025em; white-space: nowrap; }
+.hero__quote-line--strategy { margin-top: 5px; font-size: 19px; text-align: center; }
 .hero__portrait {
   position: absolute;
   z-index: 2;
@@ -311,6 +311,7 @@ button:focus-visible, a:focus-visible { outline: 3px solid #91a18b; outline-offs
 .achievement-gallery { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; margin: 22px 0 32px; }
 .achievement-gallery img { display: block; width: 100%; height: auto; aspect-ratio: 3 / 4; border-radius: 12px; object-fit: cover; box-shadow: 0 10px 28px rgba(47, 42, 37, 0.12); }
 .achievement-gallery + .about__subtitle { margin-top: 0; }
+.personal-status-gallery { margin-bottom: 0; }
 .about__equipment-title { max-width: 330px; margin: 29px 0 17px; color: var(--green); font-size: 25px; font-weight: 400; line-height: 1.08; letter-spacing: -0.02em; }
 .equipment-trigger { width: auto; min-width: 174px; margin: 0 0 9px; padding-right: 52px; }
 .brand-trigger { width: auto; min-width: 238px; margin: 0 0 34px; padding-right: 52px; }
@@ -498,7 +499,9 @@ a.contact-block:hover { color: var(--green); transform: translateX(2px); }
   .hero { min-height: 820px; }
   .hero__title { font-size: 67px; }
   .hero__portrait { top: 221px; right: -105px; width: 380px; }
-  .hero__quote { top: 382px; font-size: 19px; }
+  .hero__quote { top: 382px; }
+  .hero__quote-line--areas { font-size: 14px; }
+  .hero__quote-line--strategy { font-size: 18px; }
   .hero__credentials { width: 198px; }
   .city-card__image-wrap { height: 124px; }
   .about__title { font-size: 41px; }
@@ -536,10 +539,11 @@ a.contact-block:hover { color: var(--green); transform: translateX(2px); }
     top: auto;
     bottom: 176px;
     left: 68px;
-    width: 285px;
-    font-size: 31px;
+    width: 380px;
     line-height: 1.08;
   }
+  .hero__quote-line--areas { font-size: 22px; }
+  .hero__quote-line--strategy { margin-top: 9px; font-size: 30px; }
   .hero__portrait {
     top: 54px;
     right: clamp(-18px, 2.5vw, 38px);
